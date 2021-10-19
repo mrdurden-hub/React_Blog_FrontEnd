@@ -26,7 +26,10 @@ export const Navbar = styled.div`
     }
   }
   @media only screen and (max-width: 700px) {
-    display: block;
-    text-align: center;
+    /* display: block;
+    text-align: center; */
+    .social_media {
+      display: none;
+    }
   }
 `;

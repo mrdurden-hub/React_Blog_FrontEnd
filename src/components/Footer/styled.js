@@ -10,4 +10,13 @@ export const FooterPage = styled.footer`
   .footer_info {
     text-align: center;
   }
+
+  .social_media {
+    margin-top: 12px;
+    text-align: center;
+    
+    a {
+      padding: 7px;
+    }
+  }
 `;

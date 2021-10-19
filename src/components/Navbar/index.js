@@ -17,7 +17,10 @@ export default function Navbar() {
           Início
         </Link>
         <Link className="link" to="/about">
-          Sobre
+          Sobre mim
+        </Link>
+        <Link className="link" to="/contato">
+          Contato
         </Link>
       </div>
       <div className="social_media">

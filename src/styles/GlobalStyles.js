@@ -19,6 +19,5 @@ export default createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  max-width: 1000px;
-  padding: 10px 15px;
+
 `;
