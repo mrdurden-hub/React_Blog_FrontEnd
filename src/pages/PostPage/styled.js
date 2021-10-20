@@ -4,6 +4,7 @@ export const Container = styled.div`
   margin-top: 30px;
   margin-left: 80px;
   margin-right: 80px;
+  /* line-height: 1.5em; */
 
   @media only screen and (max-width: 950px) {
     margin-left: 60px;

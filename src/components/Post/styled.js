@@ -5,17 +5,18 @@ export const Post = styled.div`
   margin-bottom: 10px;
   border-radius: 15px;
   display: flex;
-
-  .postInfo {
-    margin-top: 12px ;
-  }
+  align-items: flex-start;
 
   .post_date{
     margin-bottom: 5px;
   }
 
+  .category {
+    color: blue;
+  }
+
   .img {
-    max-width: 400px;
+    max-width: 300px;
     padding: 0px 10px;
 
     
@@ -30,7 +31,7 @@ export const Post = styled.div`
     }
   }
 
-  @media only screen and (max-width: 650px) {
+  @media only screen and (max-width: 800px) {
   display: block;
 
   .img {
@@ -43,5 +44,23 @@ export const Post = styled.div`
     }
   }
 }
+`;
 
+export const postInfo = styled.div`
+    margin-top: 12px ;
+`;
+
+export const readMoreBtn = styled.div`
+  margin-top: 7px;
+  background: lightgray;
+  padding: 5px 10px;
+  max-width: 20%;
+  border-radius: 20px;
+  margin: 0;
+  text-align: center;
+  @media only screen and (max-width: 650px) {
+    margin: 0 auto;
+    max-width: 100%;
+
+  }
 `;

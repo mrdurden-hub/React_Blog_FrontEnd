@@ -10,7 +10,7 @@ export default function Post({ post }) {
       <div className="img">
         <img src={post.cover.url} alt={post.title} />
       </div>
-      <div className="postInfo">
+      <styled.postInfo>
         <h3>
           <Link to={`/post/${post.id}`}>{post.title}</Link>
         </h3>
@@ -19,8 +19,16 @@ export default function Post({ post }) {
             {`${formatDate(post.created_at)} | ${post.author.authors}`}
           </small>
         </p>
+        <p className="category">
+          <small>
+            {`Categoria: ${post.category.name}`}
+          </small>
+        </p>
         <p>{post.description}</p>
-      </div>
+        <styled.readMoreBtn>
+          <Link to={`/post/${post.id}`}>Ler mais</Link>
+        </styled.readMoreBtn>
+      </styled.postInfo>
 
     </styled.Post>
   );

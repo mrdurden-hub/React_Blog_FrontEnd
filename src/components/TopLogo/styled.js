@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Navbar = styled.div`
+export const Div = styled.div`
   padding: 20px 0px;
   display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  justify-content: space-around;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
   a {
     padding: 7px;
@@ -17,7 +17,7 @@ export const Navbar = styled.div`
   img {
     max-width: 90px;
   }
-  .menu {
+  .logo {
     display: flex;
     justify-content: space-around;
   }

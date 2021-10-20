@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import { DiscussionEmbed } from 'disqus-react';
 import axios from '../../utils/axios';
 import * as styled from './styled';
 import { formatDate } from '../../utils/formate-date';
@@ -55,6 +56,7 @@ export default function PostPage() {
             >
               {post.content}
             </ReactMarkdown>
+            <DiscussionEmbed title={post.title} slug={post.slug} />
           </styled.mainContent>
 
         </div>
