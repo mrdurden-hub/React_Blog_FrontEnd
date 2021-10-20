@@ -15,7 +15,7 @@ export const Post = styled.div`
   }
 
   .img {
-    max-width: 300px;
+    max-width: 400px;
     padding: 0px 10px;
 
     

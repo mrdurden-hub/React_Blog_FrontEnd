@@ -27,7 +27,7 @@ export default function PostPage() {
             <p>{post.description}</p>
             <p className="postInfo">
               <small>
-                {`${formatDate(post.created_at)} | ${post.author.authors}`}
+                {`Publicado em ${formatDate(post.created_at)} por ${post.author.authors}`}
               </small>
             </p>
             <img src={post.cover.url} alt={post.title} />
@@ -51,6 +51,7 @@ export default function PostPage() {
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}
               skipHtml={false}
+
             >
               {post.content}
             </ReactMarkdown>

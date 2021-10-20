@@ -18,7 +18,6 @@ export const Container = styled.div`
   }
 
   @media only screen and (max-width: 400px) {
-    background: lightblue;
   } 
 `;
 
@@ -68,6 +67,10 @@ export const Aside = styled.aside`
 export const mainContent = styled.div`
   margin-left: 0;
   max-width: 70%;
+
+  a {
+    color: blue;
+  }
 
   @media only screen and (max-width: 950px) {
     margin: 0 auto;
