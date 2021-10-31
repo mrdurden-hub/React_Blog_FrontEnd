@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin-top: 30px;
+  /* margin-top: 30px;
   margin-left: 80px;
-  margin-right: 80px;
+  margin-right: 80px; */
   /* line-height: 1.5em; */
+
 
   @media only screen and (max-width: 950px) {
     margin-left: 60px;
@@ -25,6 +26,8 @@ export const Container = styled.div`
 export const Header = styled.header`
   max-width: 70%;
   margin-left: 0;
+  margin: auto;
+
   img {
     max-width: 100%;
     margin-top: 7px;
@@ -46,28 +49,11 @@ export const Header = styled.header`
   }
 `;
 
-export const Aside = styled.aside`
-  padding: 15px 25px;
-  width: 25%;
-  float: right;
-  /* background-color: lightgray; */
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-
-  text-align: center;
-
-  img {
-    margin-top: 7px;
-    margin-bottom: 7px;
-    max-width: 150px;
-    border-radius: 100%;
-    max-height: 200px;
-    }
-`;
-
 export const mainContent = styled.div`
   margin-left: 0;
   max-width: 70%;
+  margin: auto;
+  line-height: 1.8;
 
   a {
     color: blue;

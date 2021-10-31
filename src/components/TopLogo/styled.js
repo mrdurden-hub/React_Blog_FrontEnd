@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Div = styled.div`
-  padding: 20px 0px;
+  padding: 15px 0px;
   display: flex;
   justify-content: space-around;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 
   a {
     padding: 7px;

@@ -34,25 +34,11 @@ export default function PostPage() {
             <img src={post.cover.url} alt={post.title} />
           </styled.Header>
 
-          <styled.Aside>
-            <styled.AsideHeader>
-              <p>Autor</p>
-            </styled.AsideHeader>
-            <styled.asideImg>
-              <img src="https://res.cloudinary.com/dvtst96wr/image/upload/v1633427655/IMG_20190402_001929_entyc3.jpg" alt={post.title} />
-            </styled.asideImg>
-            <styled.AuthorInfo>
-              <p>{post.author.authors}</p>
-              <h4>Programador Javascript Full Stack</h4>
-            </styled.AuthorInfo>
-          </styled.Aside>
-
           <styled.mainContent>
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}
               skipHtml={false}
-
             >
               {post.content}
             </ReactMarkdown>

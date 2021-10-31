@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
 export const Post = styled.div`
-  padding: 10px 0px;
+  padding: 10px 20px;
   margin-bottom: 10px;
   border-radius: 15px;
-  display: flex;
-  align-items: flex-start;
+  /* box-shadow: 1px 1px 8px 1px #888888; */
+  /* transition: transform 300ms ease-out; */
+
+  :hover {
+    border: 1px solid blue;
+    /* transform: scale(1.03); */
+  }
 
   .post_date{
     margin-bottom: 5px;
@@ -16,34 +21,20 @@ export const Post = styled.div`
   }
 
   .img {
-    max-width: 300px;
-    padding: 0px 10px;
-
-    
-    img {
-      max-width: 100%;
-      border-radius: 15px;
-      opacity: 1;
-      transition: 0.3s;
-      :hover {
-        opacity: 0.6
-      }
-    }
-  }
-
-  @media only screen and (max-width: 800px) {
-  display: block;
-
-  .img {
     max-width: 100%;
     padding: 0px 10px;
     
     img {
       max-width: 100%;
       border-radius: 15px;
+      opacity: 1;
+      transition: 0.3s;
+
+      :hover {
+        opacity: 0.6
+      }
     }
   }
-}
 `;
 
 export const postInfo = styled.div`
@@ -54,13 +45,13 @@ export const readMoreBtn = styled.div`
   margin-top: 7px;
   background: lightgray;
   padding: 5px 10px;
-  max-width: 20%;
+  max-width: 60%;
   border-radius: 20px;
-  margin: 0;
   text-align: center;
-  @media only screen and (max-width: 650px) {
-    margin: 0 auto;
-    max-width: 100%;
+  cursor: pointer;
+  margin: 7px auto;
 
-  }
+  :hover {
+        opacity: 0.6
+      }
 `;
