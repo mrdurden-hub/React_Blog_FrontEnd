@@ -3,6 +3,7 @@ import P from 'prop-types';
 import { Link } from 'react-router-dom';
 import * as styled from './styled';
 import { formatDate } from '../../utils/formate-date';
+import { Button } from '../Button';
 
 export default function Post({ post }) {
   return (
@@ -10,25 +11,31 @@ export default function Post({ post }) {
       <div className="img">
         <img src={post.cover.url} alt={post.title} />
       </div>
-      <styled.postInfo>
+
+      <styled.TitlePost>
         <h3>
           <Link to={`/post/${post.id}`}>{post.title}</Link>
         </h3>
-        <p className="post_date">
-          <small>
-            {`${formatDate(post.created_at)} | ${post.author.authors}`}
-          </small>
+      </styled.TitlePost>
+
+      <styled.PostInfo>
+        <p>
+          {`${formatDate(post.created_at)} | ${post.author.authors}`}
         </p>
-        <p className="category">
-          <small>
+        <div className="category">
+          <p>
             {`Categoria: ${post.category.name}`}
-          </small>
-        </p>
+          </p>
+        </div>
+      </styled.PostInfo>
+
+      <styled.Description>
         <p>{post.description}</p>
-        <styled.readMoreBtn>
-          <Link to={`/post/${post.id}`}>Ler mais</Link>
-        </styled.readMoreBtn>
-      </styled.postInfo>
+      </styled.Description>
+
+      <Button>
+        <Link to={`/post/${post.id}`}>Ler mais</Link>
+      </Button>
 
     </styled.Post>
   );

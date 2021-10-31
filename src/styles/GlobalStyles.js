@@ -7,16 +7,53 @@ export default createGlobalStyle`
     box-sizing: border-box;
    }
 
+   html {
+        font-size: 62.5%;
+    }
+
    body {
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-family: ${({ theme }) => theme.fonts.family.default}
     }
 
     a {
       text-decoration: none;
-      color: black;
+      color: ${({ theme }) => theme.colors.primaryColor};
     }
+  
+    code {
+    color: red;
+  }
+
 `;
 
 export const Container = styled.div`
+  max-width: 1050px;
+  margin-left: 25px;
   margin: auto;
+
+  @media only screen and (max-width: 820px) {
+    max-width: 700px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    max-width: 600px;
+  }
+
+  @media only screen and (max-width: 620px) {
+    max-width: 500px;
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  img {
+    max-width: 100%;
+    margin-top: 7px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+  }
 `;

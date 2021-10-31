@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from '../../utils/axios';
 import PostCard from '../../components/PostCard';
 import * as styled from './styled';
+import { Container } from '../../styles/GlobalStyles';
 
 export default function Home() {
   const [posts, setPost] = useState([]);
@@ -9,15 +10,13 @@ export default function Home() {
   useEffect(() => {
     axios.get('/posts').then((res) => {
       setPost(res.data);
-      console.log(res);
-      console.log(res.data);
     });
   }, []);
 
   return (
-    <styled.PostContainer>
-      <styled.H2>Artigos recentes</styled.H2>
+    <Container>
+      <styled.Title>Artigos recentes</styled.Title>
       <PostCard posts={posts} />
-    </styled.PostContainer>
+    </Container>
   );
 }

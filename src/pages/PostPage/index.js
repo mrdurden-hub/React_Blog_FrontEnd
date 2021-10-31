@@ -7,6 +7,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import axios from '../../utils/axios';
 import * as styled from './styled';
 import { formatDate } from '../../utils/formate-date';
+import { Container } from '../../styles/GlobalStyles';
 
 export default function PostPage() {
   const [postPage, setPost] = useState([]);
@@ -20,17 +21,17 @@ export default function PostPage() {
   }, [id]);
 
   return (
-    <styled.Container>
+    <Container>
       {postPage.map((post) => (
-        <div key={post.id}>
+        <styled.Content key={post.id}>
           <styled.Header>
-            <h2>{post.title}</h2>
+            <h1>{post.title}</h1>
             <p>{post.description}</p>
-            <p className="postInfo">
+            <div className="postInfo">
               <small>
                 {`Publicado em ${formatDate(post.created_at)} por ${post.author.authors}`}
               </small>
-            </p>
+            </div>
             <img src={post.cover.url} alt={post.title} />
           </styled.Header>
 
@@ -45,9 +46,9 @@ export default function PostPage() {
             <DiscussionEmbed title={post.title} slug={post.slug} />
           </styled.mainContent>
 
-        </div>
+        </styled.Content>
       ))}
-    </styled.Container>
+    </Container>
 
   );
 }
