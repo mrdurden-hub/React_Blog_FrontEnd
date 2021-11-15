@@ -45,7 +45,7 @@ export const Container = styled.div`
   }
 
   @media only screen and (max-width: 450px) {
-    max-width: 300px;
+    max-width: 360px;
     margin: 0 auto;
   }
 
