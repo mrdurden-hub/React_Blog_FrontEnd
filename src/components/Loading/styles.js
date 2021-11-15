@@ -55,8 +55,8 @@ export const LoadingMessage = styled.div`
   @media only screen and (max-width: 700px) {
     & {
       position: absolute;
-      top: 40%;
-      left: 20%;
+      top: 30%;
+      left: 12%;
     }
   }
 `;

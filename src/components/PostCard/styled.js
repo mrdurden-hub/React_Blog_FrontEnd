@@ -7,6 +7,13 @@ export const Content = styled.div`
 
     @media only screen and (max-width: 820px) {
     display: block;
-    max-width: 700px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+    @media only screen and (max-width: 500px) {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto;
   }
 `;

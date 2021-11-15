@@ -32,20 +32,20 @@ export const Container = styled.div`
   margin: auto;
 
   @media only screen and (max-width: 820px) {
-    max-width: 700px;
+    max-width: 500px;
   }
 
   @media only screen and (max-width: 700px) {
-    max-width: 600px;
-  }
-
-  @media only screen and (max-width: 620px) {
     max-width: 500px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    max-width: 430px;
 
   }
 
-  @media only screen and (max-width: 500px) {
-    max-width: 400px;
+  @media only screen and (max-width: 450px) {
+    max-width: 300px;
     margin: 0 auto;
   }
 
