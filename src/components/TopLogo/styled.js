@@ -26,11 +26,8 @@ export const Div = styled.div`
       list-style-type: none;
     }
   }
+  
   @media only screen and (max-width: 700px) {
-    /* display: block;
-    text-align: center; */
-    .social_media {
       display: none;
-    }
   }
 `;

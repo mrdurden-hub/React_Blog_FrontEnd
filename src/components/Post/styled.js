@@ -4,9 +4,9 @@ export const Post = styled.div`
   padding: 10px 20px;
   margin-bottom: 10px;
   border-radius: 15px;
-  max-height: 470px;
+  max-height: 670px;
   box-shadow: 1px 1px 8px 1px #888888;
-  transition: transform 300ms ease-in-out; 
+  transition: transform 425ms ease-in-out; 
 
   &:hover {
     border: 1px solid #0088cc;

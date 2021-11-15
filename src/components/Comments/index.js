@@ -1,18 +1,21 @@
-import { DiscussionEmbed } from 'disqus-react';
+import Disqus from 'disqus-react';
 import P from 'prop-types';
 import { Container } from './styled';
 
 export default function Comments({ slug, title }) {
+  const disqusShortname = 'mateuscarvalho';
+  const disqusConfig = {
+    url: `/posts/${slug}`,
+    identifier: slug,
+    title,
+    language: 'pt_BR',
+  };
+
   return (
     <Container>
-      <DiscussionEmbed
-        shortname="mateuscarvalho"
-        config={{
-          url: `/posts/${slug}`,
-          identifier: slug,
-          title,
-          language: 'pt_BR',
-        }}
+      <Disqus.DiscussionEmbed
+        shortname={disqusShortname}
+        config={disqusConfig}
       />
     </Container>
   );

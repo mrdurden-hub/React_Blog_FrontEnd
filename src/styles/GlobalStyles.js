@@ -8,13 +8,13 @@ export default createGlobalStyle`
    }
 
    html {
-        font-size: 62.5%;
+      font-size: 62.5%;
     }
 
    body {
     font-size: 1.6rem;
-    font-family: ${({ theme }) => theme.fonts.family.default}
-    }
+    font-family: ${({ theme }) => theme.fonts.family.secoundary};
+  }
 
     a {
       text-decoration: none;
@@ -22,14 +22,13 @@ export default createGlobalStyle`
     }
   
     code {
-    color: red;
+      color: red;
   }
 
 `;
 
 export const Container = styled.div`
   max-width: 1050px;
-  margin-left: 25px;
   margin: auto;
 
   @media only screen and (max-width: 820px) {

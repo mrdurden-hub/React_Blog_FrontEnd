@@ -1,14 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Header = styled.header`
   margin-left: 0;
   margin: auto;
   max-width:70%;
-
-  .postInfo {
-    margin-top: 7px;
-    color: gray;
-  }
 
   @media only screen and (max-width: 950px) {
     margin: 0 auto;
@@ -16,16 +11,32 @@ export const Header = styled.header`
   }
 `;
 
-export const Content = styled.div`
+export const PostInfo = styled.div`
+  color: gray;
+`;
 
+export const Title = styled.div`
+${({ theme }) => css`
+  font-size: ${theme.fonts.sizes.xlarge};
+`}
+`;
+
+export const Description = styled.div`
+${({ theme }) => css`
+  font-size: ${theme.fonts.sizes.medium};
+  margin-top: 7px;
+`}
+`;
+
+export const Content = styled.div`
   p {
     line-height: 2.5rem;
     padding: 10px;
+    font-size: ${({ theme }) => theme.fonts.sizes.medium}; 
   }
 
   h1, h2, h3, h4, h5, h6 {
-    line-height: 3.9rem;
-
+    line-height: 3.5rem;
   }
 `;
 

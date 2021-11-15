@@ -1,6 +1,19 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const showTheme = (visible) => {
+  if (visible) {
+    return css`
+        display: flex;
+        justify-content: center;
+  `;
+  }
+  return css`
+        display: none;
+  `;
+};
 
 export const Navbar = styled.div`
+  ${({ theme, visible }) => css`
   padding: 20px 0px;
   display: flex;
   justify-content: center;
@@ -12,25 +25,68 @@ export const Navbar = styled.div`
     text-decoration: none;
     font-weight: 700;
     color: black;
+    position: relative;
   }
 
-  img {
-    max-width: 90px;
+  a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0.2rem;
+      background: ${theme.colors.lightBlue};
+      transition: all 300ms ease-in-out;
   }
-  .menu {
-    display: flex;
-    justify-content: space-around;
-  }
-  .social_media {
-    li {
-      list-style-type: none;
+
+  a:hover::after {
+      left: 15%;
+      width: 70%;
     }
-  }
-  @media only screen and (max-width: 700px) {
-    /* display: block;
-    text-align: center; */
-    .social_media {
+
+    Button {
       display: none;
     }
+
+  @media only screen and (max-width: 700px) {
+    display: block;
+
+      a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0.2rem;
+      background: ${theme.colors.lightBlue};
+      transition: all 300ms ease-in-out;
   }
+
+  a:hover::after {
+      left: 42%;
+      width: 15%;
+
+    }
+
+    
+    .menuLinks {
+      a {
+        ${showTheme(visible)}
+      }
+    }
+    Button {
+      display: block;
+    }
+  }
+  `}
+`;
+
+export const Button = styled.button`
+ ${({ theme }) => css`
+  border: none;
+
+  > svg {
+    color: ${theme.colors.defaultBg};
+  }
+  `}
 `;
