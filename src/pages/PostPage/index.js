@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
-// import { DiscussionEmbed } from 'disqus-react';
+import Comments from '../../components/Comments/index';
 import axios from '../../utils/axios';
 import * as styled from './styled';
 import { Code } from '../../components/Code';
@@ -66,7 +66,7 @@ export default function PostPage() {
                 },
               }}
             />
-            {/* <DiscussionEmbed title={post.title} slug={post.slug} /> */}
+            <Comments title={post.title} slug={post.slug} />
           </styled.mainContent>
 
         </styled.Content>

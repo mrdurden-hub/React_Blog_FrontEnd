@@ -53,7 +53,7 @@ export const Navbar = styled.div`
 
       a:after {
       content: '';
-      position: absolute;
+      /* position: absolute; */
       bottom: 0;
       left: 50%;
       width: 0;
