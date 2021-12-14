@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Close } from '@styled-icons/material-outlined/Close';
-import { Menu } from '@styled-icons/material-outlined/Menu';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { Container } from '../../styles/GlobalStyles';
 
 import * as styled from './styled';
@@ -25,7 +25,7 @@ export default function Navbar() {
     <styled.Navbar visible={visible}>
       <Container>
         <styled.Button onClick={handleClick}>
-          {visible ? <Close size={25} /> : <Menu size={25} />}
+          {visible ? <Close size={25} /> : <GiHamburgerMenu size={25} />}
         </styled.Button>
 
         <div className="menuLinks">

@@ -5,7 +5,7 @@ export const Post = styled.div`
   margin-bottom: 10px;
   border-radius: 15px;
   max-height: 670px;
-  box-shadow: 1px 1px 8px 1px #888888;
+  box-shadow: 1px 1px 3px 1px #888888;
   transition: transform 425ms ease-in-out; 
 
   &:hover {

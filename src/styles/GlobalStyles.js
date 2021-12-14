@@ -14,6 +14,8 @@ export default createGlobalStyle`
    body {
     font-size: 1.6rem;
     font-family: ${({ theme }) => theme.fonts.family.secoundary};
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.colors.primaryColor};
   }
 
     a {
@@ -31,21 +33,33 @@ export const Container = styled.div`
   max-width: 1050px;
   margin: auto;
 
+  @media only screen and (max-width: 1080px) {
+    max-width: 900px;
+  }
+
+  @media only screen and (max-width: 910px) {
+    max-width: 800px;
+  }
+
   @media only screen and (max-width: 820px) {
-    max-width: 500px;
+    max-width: 700px;
   }
 
   @media only screen and (max-width: 700px) {
-    max-width: 500px;
+    max-width: 600px;
   }
 
-  @media only screen and (max-width: 550px) {
-    max-width: 430px;
-
+  @media only screen and (max-width: 610px) {
+    max-width: 470px;
   }
 
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 480px) {
     max-width: 360px;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 380px) {
+    max-width: 300px;
     margin: 0 auto;
   }
 

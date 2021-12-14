@@ -1,17 +1,18 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Div = styled.div`
+  ${({ theme }) => css`
   padding: 15px 0px;
   display: flex;
   justify-content: space-around;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px ${theme.colors.primaryColor};
 
   a {
     padding: 7px;
     margin: 0 10px;
     text-decoration: none;
     font-weight: 700;
-    color: black;
+    color: ${theme.colors.primaryColor};
   }
 
   img {
@@ -26,8 +27,9 @@ export const Div = styled.div`
       list-style-type: none;
     }
   }
-  
+ 
   @media only screen and (max-width: 700px) {
       display: none;
   }
+`}
 `;

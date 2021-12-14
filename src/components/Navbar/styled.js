@@ -24,7 +24,7 @@ export const Navbar = styled.div`
     margin: 0 10px;
     text-decoration: none;
     font-weight: 700;
-    color: black;
+    color: ${theme.colors.primaryColor};
     position: relative;
   }
 
@@ -84,9 +84,10 @@ export const Navbar = styled.div`
 export const Button = styled.button`
  ${({ theme }) => css`
   border: none;
+  background: none;
 
   > svg {
-    color: ${theme.colors.defaultBg};
+    color: ${theme.colors.primaryColor};
   }
   `}
 `;

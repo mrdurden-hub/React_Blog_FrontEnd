@@ -7,7 +7,7 @@ export const Content = styled.div`
 
     @media only screen and (max-width: 820px) {
     display: block;
-    max-width: 500px;
+    max-width: 700px;
     margin: 0 auto;
   }
 
