@@ -5,7 +5,15 @@ export const Content = styled.div`
     grid-template-columns: auto auto auto;
     gap: 30px;
 
-    @media only screen and (max-width: 820px) {
+  @media only screen and (max-width: 1190px) {
+    gap:0;
+  }
+
+  @media only screen and (max-width: 1080px) {
+    gap:20px;
+  }
+
+    @media only screen and (max-width: 955px) {
     display: block;
     max-width: 700px;
     margin: 0 auto;
